@@ -1,4 +1,13 @@
+.container-fluid {
+    padding: 0%;
+}
 #top-bar {
     background-color: black;
+}
+
+#logga-in {
     color: white;
+}
+
+#menu-bar {
 }
