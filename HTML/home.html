@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HKFC</title>
-    <link rel="icon" href="./Images/HKFC_logo.png">
+    <link rel="icon" href="../Images/HKFC_logo.png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS\main.css">
@@ -14,43 +14,133 @@
         .container-fluid {
             padding: 0%;
         }
+
+        /* Top Bar */
+
         #top-bar {
-            background-color: black;
+            background-color: #292E32;
         }
 
         #logga-in {
             color: white;
+            text-decoration: none;
         }
 
-        #menu-bar {
+        /* Navigation Bar */
+
+        .navbar {
             background: url('../Images/HKFC.png');
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center;
-  height: 100px;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center;
+            height: 90px;
+            justify-content: center;
         }
+
+        .nav-link {
+            margin: 110px 30px 0px 30px;
+            color: white;
+        }
+
+        #logga {
+            margin-top: 70px;
+        }
+
+        #navbarDropdownMenuLink {
+            margin-top: 20px;
+        }
+        
+        /* First Section */
+
+        #section1 {
+            background-color: #ffbaba;
+            height: 600px;
+        }
+
+        #h1 {
+            margin-top: 60px;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        /* Second Section */
+
+        #section2 {
+            background-color: #bb2a2a;
+            height: 650px;
+        }
+        
     </style>
     
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row justify-content-end" id="top-bar">
-            <div class="col-1"><a href="" id="logga-in">Logga in</a></div>
-            <div class="col-1"><a href="" id="logga-in"><img src="../Images/print.png" alt="print"></a></div>
+        <div class="row justify-content-end" id="top-bar" height="10px">
+            <div class="col-1 text-right"><a href="" id="logga-in">Logga in</a></div>
+            <div class="col-1"><a href=""><img src="../Images/print.png" alt="print" height="20px"></a></div>
 
         </div>
-        <div class="row" id="menu-bar">
-            <!-- <img src="../Images/HKFC.png" alt="HKFC Logga Bakgrund" height="100px"/> -->
+        <!-- <div class="row justify-content-center" id="menu-bar">
             <div class="col-1 text-center">HEM</div>
             <div class="col-1 text-center">NYHETER</div>
             <div class="col-1 text-center">TRUPPEN</div>
-            <div class="col-1 justify-content-center align-content-center">
-                <img src="../Images/HKFC_logo.png" alt="HKFC Logga" height="150px"/>
+            <div class="col-2 text-center">
+                <img src="../Images/HKFC_logo.png" alt="HKFC Logga" height="120px"/>
             </div>
             <div class="col-1 text-center">MATCHER</div>
             <div class="col-1 text-center">OM HKFC</div>
+        </div> -->
+
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid" id="navbar">
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse offset-2" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">HEM</a>
+                  <a class="nav-link" href="#">NYHETER</a>
+                  <a class="nav-link" href="#">TRUPPEN</a>
+                  <a class="nav-link" id="logga" href="#">
+                      <img src="../Images/HKFC_logo.png" alt="HKFC Logga" height="120px"/>
+                  </a>
+                  <a class="nav-link" href="#">MATCHER</a>
+                  <a class="nav-link" href="#">OM HKFC</a>
+
+                </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../Images/hamburger.png" alt="" width="20" height="24">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">KALENDER</a></li>
+                        <li><a class="dropdown-item" href="#">TABELL</a></li>
+                        <li><a class="dropdown-item" href="#">KONTAKT</a></li>
+                        <li><a class="dropdown-item" href="#">MEDLEMAVGIFT</a></li>
+                        <li><a class="dropdown-item" href="#">PLAY FOOTBALL IN GOTHENBURG</a></li>
+                    </ul>
+                </li>
+              </div>
+              
+            </div>
+        </nav>
+        
+        <div class="row" id="section1" justify-items-center>
+            <div class="col-md-6 text-center offset-3" id="h1">HÖGABORG KÄRRALUND FC</div>
 
         </div>
+
+        <div class="row" id="section2">
+            hi
+        </div>
+
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: #292E32; color: whitesmoke">
+              hi
+              <a class="text-light" href="#" style="color: whitesmoke"></a>
+            </div>
+        </footer>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
